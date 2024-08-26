@@ -1,0 +1,77 @@
+
+* {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0px;
+  transition: .1s;
+}
+body{
+    background-image: url(images/Al-Aqsa\ mosque\ preacher\ warns\ Jerusalem\ will\ soon\ be\ _capital\ of\ global\ caliphate_.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+h1{
+    font-weight: 800;
+    padding: 10px;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    min-width: 300px;
+    width: 35%;
+    margin-top: 50px;
+    height: 500px;
+    background-color: 	#dbe1e3b0;
+    border-radius: 3%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    font-weight: 800;
+    justify-content: space-between;
+    box-shadow: 0px 1px 1px 1px rgba(69, 69, 69, 0.564);
+    
+}
+
+.right{
+    min-width: 300px;
+    width: 35%;
+    margin-top: 100px;
+}
+.prayer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.accordion-button{
+    text-align: center;
+    display: block;
+}
+.btn{
+    margin: 10px;
+}
+.show{
+transition: 1s;
+}
+
+@media only screen and (max-width: 900px){
+    main{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .right,.left{
+        width: 80%;
+    }
+    body{
+        background-repeat: repeat;
+        background-size: cover;
+    }
+}

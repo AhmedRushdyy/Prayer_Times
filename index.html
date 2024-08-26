@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="node_modules/axios/dist/axios.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=League+Spartan:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <title>مواقيت الصلاة</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">مواقيت الصلاة</h1>
+      <main>
+        <div class="left border border-black">
+            <div class="prayer">
+                <span>
+                    صلاة الفجر
+                </span>
+                <div class="time">
+                </div>
+            </div>
+            <div class="prayer">
+                <span>
+                    الشروق
+                </span>
+                <div class="time">
+                    
+                </div>
+            </div>
+            <div class="prayer">
+                <span>
+                    صلاة الظهر
+
+                </span>
+                <div class="time">
+                </div>
+            </div>
+            <div class="prayer">
+                <span>
+                    صلاة العصر
+                </span>
+                <div class="time">
+
+                </div>
+            </div>
+            <div class="prayer">
+                <span>
+                    صلاة المغرب
+                </span>
+                <div class="time">
+
+                </div>
+            </div>
+            <div class="prayer">
+                <span>
+                    صلاة العشاء
+                </span>
+                <div class="time">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="right">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button border border-black"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                  id="btn1"
+                >
+                  الدولة
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <div class="countries">
+                    <button type="button" class="btn btn-outline-info active" id="v" data-country="Egypt">
+                      مصر
+                    </button>
+                    <button type="button" class="btn btn-outline-info" data-country="Saudi">
+                      السعودية
+                    </button>
+                    <button type="button" class="btn btn-outline-info" data-country="America">
+                      امريكا
+                    </button>
+                    <button type="button" class="btn btn-outline-info" data-country="Japan">
+                      اليابان
+                    </button>
+                    <button type="button" class="btn btn-outline-info" data-country="Englend">
+                      انجلترا
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+
+                    id="btn2"
+                    class="accordion-button border border-black"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="true"
+                    aria-controls="collapseTwo"
+                  >
+                    المدينة
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body" >
+                    <div class="cities" id="innerCity">
+                      <button type="button" class="btn btn-outline-info active eg" data-city="cairo" >
+                        القاهرة
+                      </button>
+                      <button type="button" class="btn btn-outline-info eg" data-city="EG-GZ">
+                        الجيزة
+                      </button>
+                      <button type="button" class="btn btn-outline-info eg" data-city="Alexandria">
+                        الاسكندرية
+                      </button>
+                      <button type="button" class="btn btn-outline-info eg" data-city="EG-MNF">
+                        المنوفية
+                      </button>
+                      <button type="button" class="btn btn-outline-info eg" data-city="aswan">
+                        اسوان
+                      </button>
+                      <button type="button" class="btn btn-outline-info eg" data-city="EG-SIN">
+                        شمال سينا
+                     </button>
+                      <button type="button" class="btn btn-outline-info sa" data-city="SA-01">
+                        الرياض
+                      </button>
+                      <button type="button" class="btn btn-outline-info sa" data-city="SA-09">
+                        جدة
+                      </button>
+                      <button type="button" class="btn btn-outline-info sa" data-city="SA-02">
+                        مكة
+                      </button>
+                      <button type="button" class="btn btn-outline-info sa" data-city="SA-03">
+                        المدينة
+                      </button>
+                      <button type="button" class="btn btn-outline-info usa" data-city="US-WA">
+                        واشنطن
+                      </button>
+                      <button type="button" class="btn btn-outline-info usa" data-city="US-CA">
+                        كاليفورنيا
+                      </button>
+                      <button type="button" class="btn btn-outline-info usa" data-city="LA">
+                        لوس انجلوس
+                      </button>
+                      <button type="button" class="btn btn-outline-info jp" data-city="JP-13">
+                        طوكيو
+                      </button>
+                      <button type="button" class="btn btn-outline-info jp" data-city="JP-26">
+                        كيوتو
+                      </button>
+                      <button type="button" class="btn btn-outline-info jp" data-city="JP-27">
+                        اوساكا
+                      </button>
+                      <button type="button" class="btn btn-outline-info en" data-city="london">
+                        لندن
+                      </button>
+                      <button type="button" class="btn btn-outline-info en" data-city="liverpool">
+                        ليفربول
+                      </button>
+                      <button type="button" class="btn btn-outline-info en" data-city="Manchester">
+                        مانشستر
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
